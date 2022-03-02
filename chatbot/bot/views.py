@@ -2,7 +2,6 @@ from django.http import HttpResponse, JsonResponse
 import json, codecs, csv, pickle
 
 from tensorflow.keras.models import load_model
-from konlpy.tag import Okt
 
 from .module import *
 
@@ -60,7 +59,7 @@ def hello(request):
     json_body = json.loads(request.body)
     user_utterance = json_body['userRequest']['utterance']
 
-    nlp_object = NLP(user_utterance, model, label_dict, Okt, token)
+    nlp_object = NLP(user_utterance, model, label_dict, token)
 
     text = kakao_simpleText(nlp_object.answer)
     return JsonResponse(text)
