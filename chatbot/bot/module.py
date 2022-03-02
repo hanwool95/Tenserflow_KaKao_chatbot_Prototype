@@ -1,5 +1,6 @@
 stopwords = ['의','가','이','은','들','는','좀','잘','걍','과','도','를','으로','자','에','와','한','하다']
 from konlpy.tag import Okt
+okt = Okt()
 
 class NLP:
     def __init__(self, utterance, model, label_dic, token):
@@ -10,7 +11,6 @@ class NLP:
         self.create_answer(token)
 
     def create_answer(self, token):
-        okt = Okt()
         temp_X = okt.morphs(self.utterance, stem=True)
         temp_X = [word for word in temp_X if not word in stopwords]
         data = ""
