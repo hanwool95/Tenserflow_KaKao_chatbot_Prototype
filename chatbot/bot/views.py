@@ -1,6 +1,3 @@
-from django.shortcuts import render
-
-# Create your views here.
 from django.http import HttpResponse, JsonResponse
 import json, codecs, csv, pickle
 
@@ -8,6 +5,7 @@ from tensorflow.keras.models import load_model
 from konlpy.tag import Okt
 
 from .module import *
+
 
 def create_label_dict():
     with codecs.open('label.csv', 'r') as f:
@@ -23,11 +21,13 @@ def create_label_dict():
                 label_dict[int(line[2])] = line[3]
     return label_dict
 
+
 def load_token():
     with open('token.pickle', 'rb') as fr:
         token = pickle.load(fr)
         #print(token.word_index)
     return token
+
 
 def kakao_simpleText(text):
     return {
@@ -50,6 +50,7 @@ label_dict = create_label_dict()
 print(label_dict)
 print('loading token')
 token = load_token()
+
 
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")

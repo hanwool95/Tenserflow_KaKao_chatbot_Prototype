@@ -1,13 +1,7 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-import urllib.request
-from gensim.models.word2vec import Word2Vec
 from konlpy.tag import Okt
-
-from keras.models import Sequential
-from keras.layers import SimpleRNN
-
 from gensim.models import KeyedVectors
+
+
 loaded_model = KeyedVectors.load_word2vec_format("ict_model") # 모델 로드
 
 import csv, copy, codecs
@@ -57,26 +51,3 @@ for line in read_list:
         wr.writerow([count, word, line[2]])
         count += 1
 f.close()
-
-
-
-
-
-"""
-Flag = True
-while Flag == True:
-    list = []
-    sentence = input("입력해주세요")
-    okt = Okt()
-    temp_X = okt.morphs(sentence, stem=True)
-    print(temp_X)
-    temp_X = [word for word in temp_X if not word in stopwords]
-    for word in temp_X:
-        try:
-            model_list =loaded_model.wv.most_similar(word)
-            for morph in model_list:
-                list.append(morph[0])
-        except:
-            pass
-    print(list)
-"""

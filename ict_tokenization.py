@@ -1,12 +1,8 @@
 import pandas as pd
-import matplotlib.pyplot as plt
-import urllib.request
-from gensim.models.word2vec import Word2Vec
 from konlpy.tag import Okt
 
+
 train_data = pd.read_table('ict_utf.txt', error_bad_lines=False)
-
-
 
 print(train_data[:5])
 print(train_data.isnull().values.any())
@@ -28,6 +24,7 @@ for sentence in train_data['doc']:
     tokenized_data.append(temp_X)
 
 """
+채팅 관련 시각화.
 print('채팅의 최대 길이 :',max(len(l) for l in tokenized_data))
 print('채팅의 평 길이 :',sum(map(len, tokenized_data))/len(tokenized_data))
 plt.hist([len(s) for s in tokenized_data], bins=50)

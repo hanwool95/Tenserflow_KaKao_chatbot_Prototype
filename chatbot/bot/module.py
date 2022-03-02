@@ -1,5 +1,6 @@
 stopwords = ['의','가','이','은','들','는','좀','잘','걍','과','도','를','으로','자','에','와','한','하다']
 
+
 class NLP:
     def __init__(self, utterance, model, label_dic, OKT, token):
         self.utterance = utterance
