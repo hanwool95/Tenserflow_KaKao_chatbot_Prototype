@@ -52,7 +52,7 @@ model.add(Embedding(max_features, 32))
 model.add(SimpleRNN(32))
 model.add(Dense(8, activation='relu'))
 model.add(Dense(6, activation='softmax'))
-model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['acc'])
+model.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['acc'])
 model.summary()
 model.fit(X_train, y_train, epochs=3, batch_size=32)
 
