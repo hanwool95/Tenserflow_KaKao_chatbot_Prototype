@@ -57,7 +57,7 @@ code: <a href="https://github.com/hanwool95/Tenserflow_KaKao_chatbot_Prototype/b
 챗봇 api 서버("/chatbot")는 Django로 구성했다.
 신경망 학습으로 만들어진 token 정보("token.pickle")과 모델("ict_neural_model2.h5"), 그리고 답변 label numer 정보가 담겨 있는 파일("label.csv)를 manage.py가 있는 root에 옮겨놓았다.
 
-###<1> module 제작
+### <1> module 제작
 
 임의의 텍스트를 받았을 때 모델에 넣어서 알맞은 답변을 매칭하는 모듈을 제작해야 한다.<br>
 자연어처리를 전담하는 하나의 객체를 만들어서 관리하기로 결정했다.<br>
@@ -66,7 +66,7 @@ code: <a href="https://github.com/hanwool95/Tenserflow_KaKao_chatbot_Prototype/b
 code: <a href="https://github.com/hanwool95/Tenserflow_KaKao_chatbot_Prototype/blob/master/chatbot/bot/module.py">chatbot/bot/module.py</a>
 
 
-###<2> view 파일
+### <2> view 파일
 
 ![Alt text](image/image4.png)
 
@@ -79,7 +79,7 @@ Client의 request를 받으면 모듈에서 제작한 NLP 객체에 client Quest
 code: <a href="https://github.com/hanwool95/Tenserflow_KaKao_chatbot_Prototype/blob/master/chatbot/bot/views.py">chatbot/bot/views.py</a>
 
 
-###<3> 연결과 동작
+### <3> 연결과 동작
 
 ![Alt text](image/image5.png)
 
