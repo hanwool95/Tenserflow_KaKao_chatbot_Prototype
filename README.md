@@ -1,5 +1,10 @@
 # Tensorflow RNN(Simple RNN)를 활용한 Kakao(Skill server) QA Chatbot Prototype 제작
 
+<br>
+제작기간: 2020.01 (약 15일)<br>
+구성원: hanwool95<br>
+문의: hanwool95@snu.ac.kr
+
 ## 1. 학습 데이터 생성
 
 신경망 QA 학습을 위해서는 질문과 답변으로 라벨링되는 학습 데이터를 얻거나 제작해야 한다.
