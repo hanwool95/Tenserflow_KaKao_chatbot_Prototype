@@ -1,7 +1,7 @@
 # Tensorflow RNN(Simple RNN)를 활용한 Kakao(Skill server) QA Chatbot Prototype 제작
 
 <br>
-제작기간: 2020.01 (약 15일)<br>
+제작기간: 2021.01 (약 15일)<br>
 구성원: hanwool95<br>
 문의: hanwool95@snu.ac.kr
 
